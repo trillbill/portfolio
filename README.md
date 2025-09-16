@@ -4,13 +4,13 @@ A modern, responsive personal portfolio website built with React and Vite. This 
 
 ## 🚀 Live Demo
 
-Visit the live site: [willfinnegan.dev](https://willfinnegan.dev)
+Visit the live site: [willfinnegan.com](https://willfinnegan.com)
 
 ## ✨ Features
 
 ### 🎨 Modern Design
 - **Responsive Layout** - Optimized for desktop, tablet, and mobile
-- **Smooth Animations** - CSS transitions and hover effects
+- **Smooth Animations** - CSS transitions and hovenr effects
 - **Clean Typography** - Professional and readable design
 
 ### 📱 Sections
