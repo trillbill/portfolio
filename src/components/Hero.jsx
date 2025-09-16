@@ -3,7 +3,7 @@ import { isMobile } from "react-device-detect";
 
 const Hero = () => {
   const avatar = 'https://avatars.githubusercontent.com/u/20759711?v=4';
-  const videoAvatar = 'https://d23vnzhpxwsomk.cloudfront.net/videoAvatar3.mp4';
+  const videoAvatar = 'https://d23vnzhpxwsomk.cloudfront.net/videoAvatar3.webm';
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
@@ -28,7 +28,17 @@ const Hero = () => {
                 loop 
                 muted 
                 playsInline
-                poster="/profile-poster.jpg" // Optional: fallback image while loading
+                preload="metadata"
+                onError={(e) => {
+                  console.error('Video failed to load:', e);
+                  const videoElement = e.target;
+                  const parent = videoElement.parentNode;
+                  const img = document.createElement('img');
+                  img.src = avatar;
+                  img.alt = 'Will Finnegan';
+                  img.className = 'hero-avatar';
+                  parent.replaceChild(img, videoElement);
+                }}
               >
                 <source src={videoAvatar} type="video/mp4" />
                 {/* Fallback for browsers that don't support video */}
