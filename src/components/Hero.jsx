@@ -3,7 +3,7 @@ import { isMobile } from "react-device-detect";
 
 const Hero = () => {
   const avatar = 'https://avatars.githubusercontent.com/u/20759711?v=4';
-  const videoAvatar = 'https://d23vnzhpxwsomk.cloudfront.net/videoAvatar3.webm';
+  const videoAvatar = 'https://d23vnzhpxwsomk.cloudfront.net/videoAvatar3.mp4';
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
